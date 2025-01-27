@@ -1,50 +1,17 @@
 # React + TypeScript + Vite
+- npm i
+- npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+ create a React application called "Blog Post" that allows users to create, display, and delete blog posts. The application requirements are detailed below, and the finished application must pass all of the unit tests.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Requirements
+1. The "Blog Post" component should have two input fields: one for the post title and another for the post description (textarea).
+2. The application should display a "Create" button that, when clicked, adds a new blog post to the list of existing posts.
+3. The "Create" button should only add a post if both the title and description fields have values. If either field is empty, the button should not create a post.
+4. Once a post is successfully created, both the title and description fields should be cleared.
+5. The list of created blog posts should be displayed in a grid layout, with each post appearing inside a box.
+6. Each box should include:
+   - The post's title.
+   - The post's description.
+   - A "Delete" button to remove the specific post from the list.
